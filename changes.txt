@@ -1,0 +1,6 @@
+v1.0
+Added To-Do List in file ToDo.txt.
+Added changes.txt to track changes and versions.
+Added ec2_mc_launch.bat, ec2_mc_terminate.bat, ec2_mc_create_snap.bat, ec2_mc_whitelist_add.bat, ec2_mc_whitelist_remove.bat.
+Added build_package.bat to zip files to a deployment package.
+Added license information.
