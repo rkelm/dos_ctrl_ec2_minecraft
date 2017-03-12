@@ -1,4 +1,20 @@
+v2.0
+2017-03-12
+Updated build_package.bat to use a file list and to put two directories in package.
+Updated build_package.bat do include deploymentpackage from build directory of dos_ctrl_ec2.
+Added ec2_mc_backup_map.bat to backup maps to EBS volume.
+Added checking of typed input variables to whitelist_add and whitelist_remove.
+ec2_mc_create_snap.bat asks for name tag of new snapshot.
+Created ec2_mc_kick.bat batch file to kick user off the server created.
+Added kick command to ec2_mc_whitelist_add.bat.
+Created ec2_ms_punish.bat to be executed on misbehaving players.
+Added start.sh script with MC service installation, to be executed on server at instance startup.
+Added setup_server.sh script with setup for EBS volume, to be executed only at volume setup.
+Updated build_package.bat to create tarball (start.sh, server_setup.sh, minecraft-service.minecraft, minecraft-service.config.default) for EC2 server setup.
+Created setup_shortcuts.bat to setup shortcuts for batch files to easily control server by clicking on the shortcuts.
+
 v1.0
+2017-02-19
 Added To-Do List in file ToDo.txt.
 Added changes.txt to track changes and versions.
 Added ec2_mc_launch.bat, ec2_mc_terminate.bat, ec2_mc_create_snap.bat, ec2_mc_whitelist_add.bat, ec2_mc_whitelist_remove.bat.

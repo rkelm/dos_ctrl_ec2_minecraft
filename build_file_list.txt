@@ -1,0 +1,11 @@
+dos_ctrl_ec2_minecraft\changes.txt
+dos_ctrl_ec2_minecraft\README.md
+dos_ctrl_ec2_minecraft\LICENSE
+dos_ctrl_ec2_minecraft\ec2_mc_config.bat
+dos_ctrl_ec2_minecraft\ec2_mc_launch.bat
+dos_ctrl_ec2_minecraft\ec2_mc_terminate.bat
+dos_ctrl_ec2_minecraft\ec2_mc_create_snap.bat
+dos_ctrl_ec2_minecraft\ec2_mc_whitelist_add.bat
+dos_ctrl_ec2_minecraft\ec2_mc_whitelist_list.bat
+dos_ctrl_ec2_minecraft\ec2_mc_whitelist_remove.bat
+

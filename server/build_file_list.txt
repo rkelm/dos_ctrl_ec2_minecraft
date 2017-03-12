@@ -1,0 +1,4 @@
+start.sh
+setup_server.sh
+..\..\minecraft-service\minecraft
+..\..\minecraft-service\config.default

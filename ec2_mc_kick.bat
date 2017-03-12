@@ -1,12 +1,12 @@
 @ECHO OFF
-REM Batch file to remove whitelisted user on EC2 Minecraft Server.
+REM Batch file to kick user off the Minecraft server.
 SETLOCAL enabledelayedexpansion
 
 REM Load configuration.
 CALL ec2_mc_config.bat
 
-REM Let user type in minecraft user name to remove.
-ECHO Bitte geben Sie den Minecraft User Namen ein, der entfernt werden soll.
+REM Let user type in minecraft user name to add.
+ECHO Bitte geben Sie den Minecraft User Namen ein, der vom Server gekickt werden soll.
 SET /P _input=
 
 REM This remove-unwanted-chars-in-string solution was shared by jeb on stack overflow. Thank you!
@@ -22,7 +22,10 @@ set "_input=!_input:~1!"
     goto loop
 :endLoop
 
-CALL %CTRL_PATH%ec2_send_command.bat %1 service minecraft command whitelist remove %_output%
-CALL %CTRL_PATH%ec2_send_command.bat %1 service minecraft command kick %_output%
+IF DEFINED _output (
+  CALL %CTRL_PATH%ec2_send_command.bat %1 service minecraft command kick %_output%
+) ELSE (
+  ECHO Eingabe des Minecraft User Namen war leer. Kick konnte nicht ausgefuehrt werden.
+)
 
 PAUSE

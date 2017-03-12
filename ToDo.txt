@@ -1,24 +1,17 @@
-* Add build_package.zip
-	- Include dos_ctrl_ec2 files.
+* Create private configuration repo
 
-* Add LICENSE
+* Switch to goip.
 
-* Commit
-	
-* Add mc service script to project
-	- add to repo
-	- add to build_package
-	
-* Add batch file with save/backup command. 
-	- Add backup to app service script.
-	- backup_map
-	
-* Is app shutdown executed safely at ec2 instance termination?
-	* Add logging to app init-script to check. Is everything saved correctly? (Create log file with service script output (starting, stopping,...))
-
-* Fix not showing Minecraft service help fully.
-
-* Commit 
+* deploy
 
 * Write Readme.md
+	- include installation instructions
 
+* Switch maps command
+	- Put Maps in seperate directory or name with a prefix.
+	- List available maps
+	- Switch to specific map including server stop and start
+* Backup current map to S3 as tgz.
+* Restore maps command
+* Backup bare repos to server.
+	- Create script to backup bare repos to syno.
