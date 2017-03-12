@@ -8,4 +8,7 @@ dos_ctrl_ec2_minecraft\ec2_mc_create_snap.bat
 dos_ctrl_ec2_minecraft\ec2_mc_whitelist_add.bat
 dos_ctrl_ec2_minecraft\ec2_mc_whitelist_list.bat
 dos_ctrl_ec2_minecraft\ec2_mc_whitelist_remove.bat
-
+dos_ctrl_ec2_minecraft\ec2_mc_backup_map.bat
+dos_ctrl_ec2_minecraft\ec2_mc_kick.bat
+dos_ctrl_ec2_minecraft\ec2_mc_punish.bat
+setup_shortcuts.bat

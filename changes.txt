@@ -1,3 +1,9 @@
+v2.0.1
+2017-03-12
+Fixed missing file names in build_file_list.txt.
+Fixed wrong short link name in setup_shortcuts.bat. 
+Moved setup_shortcuts.bat to root dir in deployment package.
+
 v2.0
 2017-03-12
 Updated build_package.bat to use a file list and to put two directories in package.

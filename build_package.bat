@@ -12,6 +12,7 @@ CD /D %~dp0
 
 CALL ec2_mc_config.bat
 
+ECHO '************ Building setup_server.tar ************'
 REM Update tarball for server installation.
 CD server
 REM Remove old tarball if it exists.
@@ -21,18 +22,23 @@ IF EXIST ..\build\setup_server.tar (
 
 C:\Programme\7-Zip\7z.exe a -ttar ..\build\setup_server.tar @build_file_list.txt
 
+IF ERRORLEVEL 1 (
+  ECHO Error creating setup_server.tar
+  EXIT /B 1
+  )
+  
 CD ..
 
 REM Remove old package if it exists.
 IF EXIST %BUILD_DIR%%DSTFILENAME% (
 	DEL %BUILD_DIR%%DSTFILENAME%
-) 
+)
 
 REM Move up one directory level.
 CD ..
 
 REM Copy dos_ctrl_ec2 package.
-ECHO Creating deployment package %BUILD_DIR%%DSTFILENAME%
+ECHO '************ Copying %DOS_CTRL_EC2_PKG% ************'
 COPY %DOS_CTRL_EC2_DIR%%DOS_CTRL_EC2_PKG% %LOCAL_DIR%%BUILD_DIR%%DSTFILENAME%
 IF ERRORLEVEL 1 (
 	ECHO Error copying %DOS_CTRL_EC2_DIR%%DOS_CTRL_EC2_PKG%.
@@ -40,8 +46,11 @@ IF ERRORLEVEL 1 (
 	CD /D %EXCURRENTDIR%
 	EXIT /B 1
 ) ELSE (
-	ECHO Successfully copied dos_ctrl_ec2 package.
+	ECHO '************ Successfully copied dos_ctrl_ec2 package. ************'
 )
+
+ECHO '************ Building %BUILD_DIR%%DSTFILENAME% ************'
+COPY %LOCAL_DIR%setup_shortcuts.bat .
 
 REM Add files to control Minecraft instance.
 C:\Programme\7-Zip\7z.exe a %LOCAL_DIR%%BUILD_DIR%%DSTFILENAME% @%LOCAL_DIR%build_file_list.txt
@@ -54,6 +63,8 @@ IF ERRORLEVEL 1 (
 ) ELSE (
 	ECHO Successfully created deployment package.
 )
+
+DEL setup_shortcuts.bat
 
 CD %LOCAL_DIR%\build
 REM Add server setup tarball.
@@ -68,4 +79,5 @@ IF EXIST setup_server.tar (
 REM Restore previous current directory.
 CD /D %EXCURRENTDIR%
 
+ECHO '************ Successfully created deployment package ************'
 PAUSE
