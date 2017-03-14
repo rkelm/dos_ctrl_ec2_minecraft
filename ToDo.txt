@@ -1,11 +1,5 @@
 * deploy
 
-* Create private configuration repo
-
-* Switch to goip.
-
-* deploy
-
 * Write Readme.md
 	- include installation instructions
 

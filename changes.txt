@@ -1,3 +1,8 @@
+v2.0.2
+2017-03-14
+Fixed wrong TargetPath in setup_shortcuts.bat
+Fixed missing WorkingDirectory in setup_shortcuts.bat
+
 v2.0.1
 2017-03-12
 Fixed missing file names in build_file_list.txt.
