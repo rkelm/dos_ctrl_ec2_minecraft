@@ -1,3 +1,7 @@
+v2.0.3
+2017-03-15
+Fixed double name in setup_shortcuts.bat.
+
 v2.0.2
 2017-03-14
 Fixed wrong TargetPath in setup_shortcuts.bat

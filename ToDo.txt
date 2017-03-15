@@ -1,5 +1,3 @@
-* deploy
-
 * Write Readme.md
 	- include installation instructions
 
