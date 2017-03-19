@@ -1,6 +1,3 @@
-* Write Readme.md
-	- include installation instructions
-
 * Switch maps command
 	- Put Maps in seperate directory or name with a prefix.
 	- List available maps
