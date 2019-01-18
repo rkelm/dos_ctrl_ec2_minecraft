@@ -1,4 +1,5 @@
 # dos_ctrl_ec2_Minecraft
+State: RELEASED  
 Batch files to launch, terminate and control a private vanilla Minecraft server on AWS ec2 from MS Windows command line.
 
 This package uses the deployment packages from the repos dos_ctrl_ec2 and minecraft-service. They are included in this deployment package.
